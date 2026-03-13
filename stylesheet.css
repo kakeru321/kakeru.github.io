@@ -158,6 +158,113 @@ header {
   font-weight: normal;
 }
 
+.skill-sharing-wrapper {
+  padding: 0 5% 80px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.skill-card {
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  padding: 24px;
+  width: 30%;
+  text-align: left;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s;
+}
+
+.skill-card:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.skill-user {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.skill-user-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.skill-user-name {
+  font-size: 13px;
+  color: #5f5d60;
+  font-weight: bold;
+}
+
+.skill-title {
+  font-size: 15px;
+  color: #333;
+  margin: 0 0 10px;
+}
+
+.skill-desc {
+  font-size: 12px;
+  color: #b3aeb5;
+  line-height: 1.7;
+  margin: 0 0 14px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.tag {
+  background-color: #e0f5ec;
+  color: #239b76;
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 12px;
+}
+
+.skill-likes {
+  font-size: 13px;
+  color: #e0606e;
+}
+
+.skill-likes .fa {
+  margin-right: 4px;
+}
+
+.skill-share-btn-wrapper {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.skill-share-btn {
+  background-color: #239b76;
+  padding: 14px 40px;
+  font-size: 15px;
+}
+
+@media all and (max-width: 1000px) {
+  .skill-card {
+    width: 45%;
+  }
+}
+
+@media all and (max-width: 670px) {
+  .skill-card {
+    width: 100%;
+  }
+}
+
 .message-wrapper {
   border-bottom: 1px solid #eee;
   padding-bottom: 80px;
