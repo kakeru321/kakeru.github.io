@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>引っ越し業者比較｜流山おおたかの森東 → 流山市野谷</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Helvetica Neue', Arial, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.7;
+    }
+    header {
+      background: linear-gradient(135deg, #2c7be5, #1a56b0);
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 { font-size: 1.8em; margin-bottom: 8px; }
+    header .subtitle { font-size: 1em; opacity: 0.85; }
+    header .route {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      border-radius: 30px;
+      padding: 8px 24px;
+      margin-top: 14px;
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 16px; }
+    section { padding: 40px 0; }
+    h2 {
+      font-size: 1.4em;
+      color: #1a56b0;
+      border-left: 4px solid #2c7be5;
+      padding-left: 12px;
+      margin-bottom: 20px;
+    }
+    .info-box {
+      background: #e8f0fe;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-bottom: 30px;
+    }
+    .info-box p { margin-bottom: 6px; }
+    .info-box strong { color: #1a56b0; }
+
+    /* 比較テーブル */
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    .company-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .company-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    }
+    .card-header {
+      padding: 18px 20px;
+      color: #fff;
+      font-size: 1.15em;
+      font-weight: bold;
+    }
+    .card-header .rank { font-size: 0.8em; opacity: 0.85; margin-bottom: 2px; }
+    .sakai .card-header { background: linear-gradient(135deg, #e85d04, #dc2626); }
+    .art .card-header { background: linear-gradient(135deg, #0ea5e9, #0369a1); }
+    .yamato .card-header { background: linear-gradient(135deg, #16a34a, #166534); }
+    .arissan .card-header { background: linear-gradient(135deg, #9333ea, #6b21a8); }
+    .barby .card-header { background: linear-gradient(135deg, #b45309, #92400e); }
+
+    .card-body { padding: 18px 20px; }
+    .price-tag {
+      font-size: 1.4em;
+      font-weight: bold;
+      color: #dc2626;
+      margin-bottom: 12px;
+    }
+    .price-tag span { font-size: 0.6em; color: #666; font-weight: normal; }
+    .feature-list { list-style: none; }
+    .feature-list li {
+      padding: 4px 0;
+      font-size: 0.9em;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .feature-list li:last-child { border-bottom: none; }
+    .feature-list li::before { content: "✓ "; color: #16a34a; font-weight: bold; }
+    .badge {
+      display: inline-block;
+      font-size: 0.75em;
+      padding: 2px 8px;
+      border-radius: 20px;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .badge-best { background: #fef08a; color: #854d0e; }
+    .badge-cheap { background: #dcfce7; color: #166534; }
+    .badge-service { background: #dbeafe; color: #1e40af; }
+    .badge-local { background: #ede9fe; color: #5b21b6; }
+
+    /* 料金表 */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+    th {
+      background: #2c7be5;
+      color: #fff;
+      padding: 12px 16px;
+      text-align: left;
+      font-size: 0.9em;
+    }
+    td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 0.9em;
+    }
+    tr:last-child td { border-bottom: none; }
+    tr:nth-child(even) td { background: #f8faff; }
+    .highlight-row td { background: #fff7e6 !important; font-weight: bold; }
+
+    /* ポイント */
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .tip-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      border-top: 3px solid #2c7be5;
+    }
+    .tip-card .icon { font-size: 1.8em; margin-bottom: 8px; }
+    .tip-card h3 { font-size: 1em; margin-bottom: 8px; color: #1a56b0; }
+    .tip-card p { font-size: 0.88em; color: #555; }
+
+    /* 見積もりCTA */
+    .cta-section {
+      background: linear-gradient(135deg, #2c7be5, #1a56b0);
+      color: #fff;
+      border-radius: 14px;
+      padding: 36px 30px;
+      text-align: center;
+      margin: 20px 0;
+    }
+    .cta-section h2 { color: #fff; border: none; padding: 0; margin-bottom: 10px; }
+    .cta-section p { opacity: 0.9; margin-bottom: 20px; }
+    .cta-buttons { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+    .cta-btn {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 0.95em;
+      transition: opacity 0.2s;
+    }
+    .cta-btn:hover { opacity: 0.85; }
+    .cta-btn-primary { background: #fff; color: #1a56b0; }
+    .cta-btn-secondary { background: rgba(255,255,255,0.2); color: #fff; border: 2px solid rgba(255,255,255,0.6); }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.85em;
+      color: #888;
+      background: #fff;
+      margin-top: 40px;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.3em; }
+      .price-tag { font-size: 1.2em; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1>引っ越し業者 比較ガイド</h1>
+    <div class="route">流山おおたかの森東 → 流山市野谷</div>
+    <p class="subtitle" style="margin-top:12px;">同市内（流山市内）近距離引越し｜2026年版</p>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- 移動概要 -->
+  <section>
+    <h2>引越し概要</h2>
+    <div class="info-box">
+      <p><strong>出発地：</strong>流山おおたかの森東（千葉県流山市）</p>
+      <p><strong>目的地：</strong>流山市野谷（千葉県流山市）</p>
+      <p><strong>距離：</strong>約2〜4km（市内近距離引越し）</p>
+      <p><strong>料金目安：</strong>単身なら <strong style="color:#dc2626">約2〜5万円</strong>、家族（2〜3人）なら <strong style="color:#dc2626">約4〜10万円</strong> が相場</p>
+      <p><strong>ポイント：</strong>同市内の近距離引越しのため、大手よりも<strong>地元密着業者や格安プラン</strong>が特にお得になりやすいです</p>
+    </div>
+  </section>
+
+  <!-- 業者カード比較 -->
+  <section>
+    <h2>主要5社 詳細比較</h2>
+    <div class="comparison-grid">
+
+      <!-- サカイ -->
+      <div class="company-card sakai">
+        <div class="card-header">
+          <div class="rank">総合評価 ★★★★☆</div>
+          サカイ引越センター
+        </div>
+        <div class="card-body">
+          <div class="price-tag">35,000円〜<span>（単身目安）</span></div>
+          <ul class="feature-list">
+            <li>相見積もりで値引きしやすい</li>
+            <li>ササッと予約（ネット完結）</li>
+            <li>不用品買取サービスあり</li>
+            <li>全国対応・実績豊富</li>
+            <li>価格.com 2026年3月 総合1位</li>
+          </ul>
+          <span class="badge badge-best">値引き交渉◎</span>
+        </div>
+      </div>
+
+      <!-- アート -->
+      <div class="company-card art">
+        <div class="card-header">
+          <div class="rank">流山市エリア 総合1位</div>
+          アート引越センター
+        </div>
+        <div class="card-body">
+          <div class="price-tag">35,000円〜<span>（単身目安）</span></div>
+          <ul class="feature-list">
+            <li>梱包資材・作業費が無料</li>
+            <li>学割・女性・シニアパックあり</li>
+            <li>荷造り〜荷解きフルコースも選択可</li>
+            <li>サービス品質が高評価</li>
+            <li>流山市エリアに対応拠点あり</li>
+          </ul>
+          <span class="badge badge-service">サービス重視◎</span>
+        </div>
+      </div>
+
+      <!-- ヤマト -->
+      <div class="company-card yamato">
+        <div class="card-header">
+          <div class="rank">荷物少なめの方向け</div>
+          クロネコヤマト（単身引越）
+        </div>
+        <div class="card-body">
+          <div class="price-tag">23,100円〜<span>（単身パック）</span></div>
+          <ul class="feature-list">
+            <li>専用ボックス使用で低コスト</li>
+            <li>ボックス2本まで対応</li>
+            <li>ネット予約が簡単</li>
+            <li>土日祝は割増あり</li>
+            <li>荷物が少ない単身向け</li>
+          </ul>
+          <span class="badge badge-cheap">最安値クラス</span>
+        </div>
+      </div>
+
+      <!-- アリさん -->
+      <div class="company-card arissan">
+        <div class="card-header">
+          <div class="rank">バランス型</div>
+          アリさんマークの引越社
+        </div>
+        <div class="card-body">
+          <div class="price-tag">30,000円〜<span>（単身目安）</span></div>
+          <ul class="feature-list">
+            <li>サービスと料金のバランスが良い</li>
+            <li>丁寧な作業で口コミ評価高め</li>
+            <li>梱包資材の提供あり</li>
+            <li>近距離引越しに強い</li>
+          </ul>
+          <span class="badge badge-service">バランス◎</span>
+        </div>
+      </div>
+
+      <!-- バービィー -->
+      <div class="company-card barby">
+        <div class="card-header">
+          <div class="rank">地域密着・格安</div>
+          引越しバービィー
+        </div>
+        <div class="card-body">
+          <div class="price-tag">要問合せ<span>（格安プランあり）</span></div>
+          <ul class="feature-list">
+            <li>千葉県流山市に対応</li>
+            <li>格安・即日対応が強み</li>
+            <li>梱包〜搬入・家具設置まで対応</li>
+            <li>地元密着で融通がきく</li>
+          </ul>
+          <span class="badge badge-local">地元密着◎</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 料金比較表 -->
+  <section>
+    <h2>料金一覧表（流山市内・近距離目安）</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>業者名</th>
+          <th>単身（荷物少）</th>
+          <th>単身（荷物普通）</th>
+          <th>ファミリー2〜3人</th>
+          <th>特徴</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="highlight-row">
+          <td>ヤマト（単身パック）</td>
+          <td>23,100円〜</td>
+          <td>30,000円〜</td>
+          <td>—</td>
+          <td>ボックス型・最安</td>
+        </tr>
+        <tr>
+          <td>アリさんマーク</td>
+          <td>30,000円〜</td>
+          <td>40,000円〜</td>
+          <td>60,000円〜</td>
+          <td>バランス型</td>
+        </tr>
+        <tr>
+          <td>サカイ引越センター</td>
+          <td>35,000円〜</td>
+          <td>50,000円〜</td>
+          <td>70,000円〜</td>
+          <td>値引き交渉しやすい</td>
+        </tr>
+        <tr>
+          <td>アート引越センター</td>
+          <td>35,000円〜</td>
+          <td>55,000円〜</td>
+          <td>80,000円〜</td>
+          <td>サービス最高品質</td>
+        </tr>
+        <tr>
+          <td>引越しバービィー</td>
+          <td>要問合せ</td>
+          <td>要問合せ</td>
+          <td>要問合せ</td>
+          <td>格安・即日対応</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="margin-top:10px; font-size:0.82em; color:#888;">※料金は繁忙期（2〜4月）・荷物量・作業オプションにより大幅に変動します。必ず見積もりをご確認ください。</p>
+  </section>
+
+  <!-- お得にするポイント -->
+  <section>
+    <h2>費用を安くするポイント</h2>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <div class="icon">📋</div>
+        <h3>一括見積もりを使う</h3>
+        <p>引越し侍・SUUMO・価格.comなどの一括見積もりサイトで複数社を比較。個別に問い合わせると高くなりがちです。</p>
+      </div>
+      <div class="tip-card">
+        <div class="icon">📅</div>
+        <h3>繁忙期を避ける</h3>
+        <p>3〜4月は料金が1.5〜2倍に。5〜2月の平日・午後便を選ぶと大幅に割安になります。</p>
+      </div>
+      <div class="tip-card">
+        <div class="icon">💬</div>
+        <h3>相見積もりで交渉</h3>
+        <p>「他社はXX円でした」と伝えるだけで値引きしてもらえるケースが多いです。特にサカイは交渉に応じやすい。</p>
+      </div>
+      <div class="tip-card">
+        <div class="icon">📦</div>
+        <h3>荷物を減らす</h3>
+        <p>不用品を事前に処分・売却することでトラックサイズが下がり、料金が大幅に下がります。</p>
+      </div>
+      <div class="tip-card">
+        <div class="icon">🏘️</div>
+        <h3>市内近距離を活かす</h3>
+        <p>流山おおたかの森東〜野谷は同市内の近距離。地元業者や格安プランが特に有利です。</p>
+      </div>
+      <div class="tip-card">
+        <div class="icon">📦</div>
+        <h3>梱包は自分でやる</h3>
+        <p>梱包を自分でやる「セルフプラン」を選ぶと、フルコースより2〜3万円安くなります。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- おすすめ判定 -->
+  <section>
+    <h2>あなたに合った業者は？</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>こんな方に</th>
+          <th>おすすめ業者</th>
+          <th>理由</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>とにかく安くしたい</td>
+          <td>ヤマト単身パック / バービィー</td>
+          <td>荷物が少ないなら最安クラス</td>
+        </tr>
+        <tr>
+          <td>値引き交渉したい</td>
+          <td>サカイ引越センター</td>
+          <td>相見積もり提示で値引きしやすい</td>
+        </tr>
+        <tr>
+          <td>サービス品質を重視</td>
+          <td>アート引越センター</td>
+          <td>梱包資材無料・作業の丁寧さ◎</td>
+        </tr>
+        <tr>
+          <td>バランスよく選びたい</td>
+          <td>アリさんマークの引越社</td>
+          <td>料金・サービスのバランスが良好</td>
+        </tr>
+        <tr>
+          <td>即日・急な引越し</td>
+          <td>引越しバービィー</td>
+          <td>地元密着・即日対応が強み</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <h2>まずは無料一括見積もりを取ろう</h2>
+    <p>複数業者を比較するだけで、平均<strong>1〜3万円</strong>の節約になります</p>
+    <div class="cta-buttons">
+      <a href="https://hikkoshizamurai.jp/chiba/nagareyama/" class="cta-btn cta-btn-primary" target="_blank" rel="noopener">引越し侍で一括見積もり</a>
+      <a href="https://hikkoshi.suumo.jp/" class="cta-btn cta-btn-secondary" target="_blank" rel="noopener">SUUMO引越しで比較</a>
+      <a href="https://hikkoshi.kakaku.com/" class="cta-btn cta-btn-secondary" target="_blank" rel="noopener">価格.comで比較</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>流山おおたかの森東 → 流山市野谷 引越し業者比較 | 2026年版</p>
+  <p style="margin-top:6px;">※料金は参考値です。実際の金額は各社に見積もりをご依頼ください。</p>
+</footer>
+
+</body>
+</html>
